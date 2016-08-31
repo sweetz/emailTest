@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>邮件</title>
+    <style type="text/css">
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: 微软雅黑;
+    }
+    
+    .clearfix:after {
+        content: " ";
+        display: block;
+        clear: both;
+        height: 0;
+    }wo
+    
+    .clearfix {
+        zoom: 1;
+    }
+    
+    .header,
+    .main,
+    .footer {
+        width: 900px;
+        text-align: center;
+        margin: 0px auto;
+    }
+    
+    .header .top {
+        height: 60px;
+        background: #fff;
+    }
+    
+    .header .top .logo {
+        width: 152px;
+        height: 30px;
+        float: left;
+        margin-top: 15px;
+        margin-left: 94px;
+    }
+    
+    .header .banner {
+        background: url(img/banner.png) no-repeat;
+        width: 100%;
+        height: 260px;
+        text-align: left;
+        color: #fafcff;
+    }
+    
+    .header .banner .content {
+        padding-left: 186px;
+    }
+    
+    .header .banner .title {
+        font-size: 32px;
+        padding-top: 60px;
+    }
+    
+    .header .banner .desc {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    .main {
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    .main .top {
+        font-size: 14px;
+        color: #51545b;
+        padding: 0px 107px;
+    }
+    
+    .main .top .name {
+        font-size: 16px;
+    }
+    
+    .main .top p {
+        line-height: 24px;
+    }
+    
+    .main .top ul {
+        list-style: none;
+        margin-top: 8px;
+    }
+    
+    .main .top ul li {
+        line-height: 24px;
+    }
+    
+    .main .top ul li .garden {
+        margin-left: 5px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    
+    .main .top .solution .title {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .main .top .solution .desc {
+        font-size: 14px;
+    }
+    
+    .main .top .solution .sln-item {
+        margin-top: 15px;
+    }
+    
+    .main .top .solution .sln-item .item {
+        width: 162px;
+        height: 147px;
+        border: 1px solid;
+        border-color: #f3a5a5 #f4b0b0;
+        float: left;
+        margin-right: 8px;
+        font-size: 14px;
+        color: #515456;
+        line-height: 20px;
+        display: table;
+        text-align: center;
+    }
+    
+    .main .top .solution .sln-item .item div {
+        padding: 0 10px;
+        vertical-align: middle;
+        display: table-cell;
+    }
+    
+    .main .top .solution .sln-item .item.end {
+        margin: 0px;
+    }
+    
+    .main .about {
+        margin-top: 30px;
+        background: #f7fafa;
+        color: #51545b;
+        padding: 26px 107px;
+    }
+    
+    .main .about .title {
+        font-size: 18px;
+    }
+    
+    .main .about .c {
+        font-size: 14px;
+        color: #515456;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+    
+    .main .about .c .left {
+        float: left;
+        width: 50%;
+    }
+    
+    .main .about .c .left p {
+        padding-right: 26px;
+    }
+    
+    .main .about .c .right p {
+        padding-left: 26px;
+    }
+    
+    .main .about .c .right {
+        float: right;
+        width: 50%;
+    }
+    
+    .main .scenario {
+        color: #51545b;
+        padding: 26px 107px;
+    }
+    
+    .main .scenario .title {
+        font-size: 18px;
+    }
+    
+    .main .scenario .s-item {
+        margin-top: 15px;
+    }
+    
+    .main .scenario .s-item .item {
+        width: 164px;
+        height: 120px;
+        float: left;
+        margin-right: 10px;
+        position: relative;
+    }
+    
+    .main .scenario .s-item .jingrong {
+        background: url(img/jingrong.png) no-repeat;
+    }
+    
+    .main .scenario .s-item .dianxin {
+        background: url(img/dianxin.png) no-repeat;
+    }
+    
+    .main .scenario .s-item .jiaotong {
+        background: url(img/jiaotong.png) no-repeat;
+    }
+    
+    .main .scenario .s-item .zhengfu {
+        background: url(img/zhengfu.png) no-repeat;
+    }
+    
+    .main .scenario .s-item .item span {
+        text-align: center;
+        width: 100%;
+        font-size: 14px;
+        color: #fff;
+        height: 30px;
+        background: #000;
+        display: block;
+        line-height: 30px;
+        position: absolute;
+        bottom: 0px;
+        filter: alpha(opacity=70);
+        /*IE滤镜，透明度50%*/
+        -moz-opacity: 0.7;
+        /*Firefox私有，透明度50%*/
+        opacity: 0.7;
+        /*其他，透明度50%*/
+    }
+    
+    .main .scenario .s-item .item.end {
+        margin-right: 0px;
+    }
+    
+    .blue {
+        color: #1f79d2;
+    }
+    
+    .footer .c {
+        padding: 6px 107px 60px 107px;
+    }
+    
+    .footer .title {
+        font-size: 16px;
+        color: #333333;
+        text-align: left;
+    }
+    
+    .footer .left {
+        float: left;
+        width: 50%;
+    }
+    
+    .footer .left ul {
+        list-style: none;
+        font-size: 14px;
+        text-align: left;
+        margin-top: 20px;
+        line-height: 24px;
+    }
+    
+    .footer .left ul li {
+        color: #666666;
+    }
+    .footer .left ul li .blog{
+        color: #1f79d2;
+        text-decoration: none;
+    }
+    
+    .footer .left .company {
+        font-size: 16px;
+    }
+    
+    .footer .right {
+        float: left;
+        width: 50%;
+    }
+    
+    .footer .right .weixin {
+        float: left;
+        margin-top: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="top">
+            <img class="logo" src="img/login_logo.svg" alt="logo">
+        </div>
+        <div class="banner">
+            <div class="content">
+                <p class="title">九章云极-保险业的大数据时代</p>
+                <p class="desc">大数据时代，中国保险业的创新与变革</p>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="top">
+            <p class="name">尊敬的先生/女士：</p>
+            <p>您好！</p>
+            <p>说到大数据，我们经常听到各行业的管理者提到：数据量越来越庞大，数据类型越来越复杂，客户和市场在不断变化，市场营销和业绩管理也面临诸多挑战！</p>
+            <p>那，如何通过客户行为分析以及历史庞大数据的挖掘来进行以客户为中心的个性化营销呢？</p>
+            <ul>
+                <li><img class="garden" src="img/garden.png">险种与消费者收入水平，文化程度存在何种关系？</li>
+                <li><img class="garden" src="img/garden.png">哪个区域的消费者最喜欢给自己买保险？</li>
+                <li><img class="garden" src="img/garden.png">哪个年龄段的消费者更倾向于买哪一类保险？</li>
+                <li><img class="garden" src="img/garden.png">如何通过数据模型和算法来指导前端业务的绩效管理？</li>
+                <li><img class="garden" src="img/garden.png">如何通过数据分析为客户推荐个性化的保单？</li>
+                <li><img class="garden" src="img/garden.png">如何将传统数据架构迁移到全新的大数据架构？</li>
+                <li><img class="garden" src="img/garden.png">如何运用互联网的产品平台获取更多的消费者数据？并做到实时分析！</li>
+            </ul>
+            <div class="solution">
+                <p class="title">九章云极为您提供端到端的大数据解决方案：</p>
+                <p class="desc">九章云极是一家领先的大数据产品及数据咨询服务提供商，将为您提供完整的数据服务：</p>
+                <div class="sln-item clearfix">
+                    <div class="item">
+                        <div>数据咨询服务</div>
+                    </div>
+                    <div class="item">
+                        <div>DataCanvas EDS 基于X86的Hadoop+MPP超融合分布式架构，提供新一代高速，开源，低成本，SQL高兼容的数据仓库服务
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>DataCanvas APS 基于机器学习模型的大数据分析平台
+                        </div>
+                    </div>
+                    <div class="item end">
+                        <div>帮助用户解决数据存储查询和分析等难题</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <p class="title">关于我们——北京九章云极科技有限公司</p>
+            <div class="c clearfix">
+                <div class="left">
+                    <p>北京九章云极科技有限公司是一家专注于云计算和大数据分析产品的公司，位于北京市海淀区中关村。公司在大数据分析机器学习，数据建模等领域拥有丰富的行业经验和技术积累。 目标客户主要集中在金融，电信运营商，公安，交通，政府等大数据集中的行业。</p>
+                </div>
+                <div class="right">
+                    <p>公司的主要产品有DataCanvas大数据基础设施数据平台EDS和分析云平台APS 。DataCanvas大数据分析云平台可以提供完整的数据服务， 包括资源平台服务、分析平台服务、算法程序模块和定制化服务，多方位满足客户需求；拥有多领域大数据分析能力，支持公有云、私有云的全自动部署，拥有业界首创的利用Docker容器封装算法分析模块，可以帮助组织迅速拥有大数据分析和处理的能力。</p>
+                </div>
+            </div>
+        </div>
+        <div class="scenario">
+            <p class="title">产品应用场景</p>
+            <div class="s-item clearfix">
+                <div class="item jingrong"><span>金 融</span></div>
+                <div class="item dianxin"><span>电 信</span></div>
+                <div class="item jiaotong"><span>交 通</span></div>
+                <div class="item zhengfu end"><span>政 府</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer ">
+        <div class="c clearfix">
+            <div class="left">
+                <p class="title">期待与您的进一步交流</p>
+                <ul>
+                    <li class="company">北京九章云极科技有限公司</li>
+                    <li>官网：<span class="blue">www.zetyun.com</span></li>
+                    <li>邮箱：<span class="blue">sophia@zetyun.com</span> </li>
+                    <li>博客：<span class="blue"><a class="blog" target="_blank" href="http://blog.datacanvas.io">http://blog.datacanvas.io</a></span></li>
+                    <li>电话：+86 -10-62982463</li>
+                    <li>传真：+86 -10-62668566</li>
+                    <li>QQ：2647762328</li>
+                    <li>地址：北京海淀区硅谷亮城2B座5层</li>
+                </ul>
+            </div>
+            <div class="right">
+                <p class="title">官方微信</p>
+                <div class="weixin">
+                    <img src="img/weixin.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
